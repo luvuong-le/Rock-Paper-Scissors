@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+
+
+/* ----------------------------------------------------
+    GAME - AREA
+* ----------------------------------------------------- */
+
+.game-area {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    position: absolute;
+}
+
+.game-title {
+    border: 6px double #fff;
+    width: 50%;
+    margin: 2em auto;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em;
+    letter-spacing: 0.5em;
+}
+
+
+/* ----------------------------------------------------
+    SCOREBOARDS
+* ----------------------------------------------------- */
+
+.scoreboard-wrapper {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+    border-radius: 0.5em;
+}
+
+.scoreboard-title-wrapper {
+    margin: 0 auto;
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    position: relative;
+    top: -1.7em;
+}
+
+.scoreboard-title {
+    background: crimson;
+    padding: 0.5em;
+}
+
+.scoreboard-content {
+    height: auto;
+    display: grid;
+    grid: "playerTitle computerTitle" 50%
+          "playerScore computerScore" 50% / 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    top: -3em;
+    width: auto;
+}
+
+.score {
+    font-size: 3em;
+    background: crimson;
+    padding: 0 0.5em;
+    color: #000;
+    border-radius: 0.2em;
+}
+
+.p1Title {
+    grid-area: playerTitle;
+}
+
+.p1Score {
+    grid-area: playerScore;
+}
+
+.computerTitle {
+    grid-area: computerTitle;
+}
+
+.computerScore {
+    grid-area: computerScore;
+}
+
+/* ----------------------------------------------------
+    GAME - ICONS
+* ----------------------------------------------------- */
+
+.game-choices-icons-wrapper {
+    width: 70%;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 2em;
+}
+
+.gcicon {
+    border: 9px double #fff;
+    border-radius: 50%;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    padding: 2em;
+    cursor: pointer;
+    background: lightseagreen;
+    transition: all 0.2s ease;
+}
+
+.gcicon i {
+    font-size: 7em;
+    color: #fff;
+}
+
+.gcicon:active {
+    transform: translateX(0.5em) translateY(0.5em);
+    border: 0.4em double green;
+}
+
+
+/* ----------------------------------------------------
+    OUTPUT - RESULT
+* ----------------------------------------------------- */
+
+.output-result-wrapper {
+    color: #fff;
+    width: 50%;
+    height: auto;
+    margin: 1em auto;
+    display: none;
+    text-align: center;
+    background: crimson;
+    padding: 0.5em;
+    animation: fadeIn 0.5s;
+}
+
+.result-text {
+    font-size: 3em;
+}
+
+.reset-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -2em;
+}
+
+.reset {
+    text-decoration: none;
+    background: crimson;
+    font-size: 1em;
+    padding: 1em;
+    color: #000;
+    transition: color 1s linear;
+}
+
+.reset:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* ----------------------------------------------------
+    GAME - AREA
+    * ----------------------------------------------------- */
+
+    .game-area {
+        height: auto;
+    }
+
+    .game-title {
+        width: 70%;
+    }
+
+
+    /* ----------------------------------------------------
+        SCOREBOARDS
+    * ----------------------------------------------------- */
+    .scoreboard-wrapper {
+        width: 80%;
+    }
+
+    /* ----------------------------------------------------
+    GAME - ICONS
+    * ----------------------------------------------------- */
+    .game-choices-icons-wrapper {
+        grid-gap: 1em;
+        margin: 2em auto;
+        width: 100%;
+    }
+
+    .gcicon {
+        padding: 1em;
+        align-self: center;
+    }
+
+    .gcicon i {
+        font-size: 4em;
+    }
+
+    .output-result-wrapper {
+        width: 70%;
+    }
+
+    .result-text {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gcicon i {
+        font-size: 2.8em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .game-choices-icons-wrapper {
+        margin: 2em auto;
+    }
+
+    .scoreboard-wrapper {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    .result-text {
+        font-size: 1.5em;
+    }
+
+    .game-area {
+        height: auto;
+    }
+}
