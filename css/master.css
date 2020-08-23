@@ -8,7 +8,6 @@
     text-transform: uppercase;
 }
 
-
 /* ----------------------------------------------------
     GAME - AREA
 * ----------------------------------------------------- */
@@ -30,7 +29,6 @@
     padding: 1em;
     letter-spacing: 0.5em;
 }
-
 
 /* ----------------------------------------------------
     SCOREBOARDS
@@ -64,8 +62,9 @@
 .scoreboard-content {
     height: auto;
     display: grid;
-    grid: "playerTitle computerTitle" 50%
-          "playerScore computerScore" 50% / 1fr 1fr;
+    grid:
+        'playerTitle computerTitle' 50%
+        'playerScore computerScore' 50% / 1fr 1fr;
     text-align: center;
     align-items: center;
     position: relative;
@@ -132,7 +131,6 @@
     border: 0.4em double green;
 }
 
-
 /* ----------------------------------------------------
     OUTPUT - RESULT
 * ----------------------------------------------------- */
@@ -176,19 +174,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    
     /* ----------------------------------------------------
     GAME - AREA
     * ----------------------------------------------------- */
 
     .game-area {
-        height: auto;
+        height: 100vh;
     }
 
     .game-title {
         width: 70%;
     }
-
 
     /* ----------------------------------------------------
         SCOREBOARDS
@@ -246,6 +242,6 @@
     }
 
     .game-area {
-        height: auto;
+        height: 100vh;
     }
 }
